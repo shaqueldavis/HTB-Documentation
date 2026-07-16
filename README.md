@@ -3,7 +3,7 @@
 ## $\color{blue}{\text{Objective}}$
 
 
-This module covers the fundamentals required to work comfortably with the Linux operating system and shell.
+This module covers the fundamentals required to work comfortably with the Linux operating system and shell. The work has been conducted through hands on Hack The Box Academy labs.
 
 ### Skills Learned
 
