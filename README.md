@@ -177,9 +177,6 @@ $\color{green}{\text{Process:}}$ <br>
 
 
 
-
- ------------------------------------
-
 ### Filter Contents
 
 
