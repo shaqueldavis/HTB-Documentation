@@ -99,12 +99,12 @@ $\color{green}{\text{Process:}}$ <br>
 
 ### Navigation
 
- $\color{green}{\text{Question:}}$ What is the name of the hidden "history" file in the htb-user's home directory? <br>
+$\color{green}{\text{Question:}}$ What is the name of the hidden "history" file in the htb-user's home directory? <br>
 $\color{green}{\text{Answer:}}$ .bash_history <br>
 $\color{green}{\text{Process:}}$ <br>
 - ls -la | grep -i history
 
- $\color{green}{\text{Question:}}$ What is the index number of the "sudoers" file in the "/etc" directory? <br>
+$\color{green}{\text{Question:}}$ What is the index number of the "sudoers" file in the "/etc" directory? <br>
 $\color{green}{\text{Answer:}}$ 147627 <br>
 $\color{green}{\text{Process:}}$ text_here<br>
 - ls --help | grep index<br>
@@ -115,13 +115,13 @@ $\color{green}{\text{Process:}}$ text_here<br>
 
 ### Working with Files and Directories
 
- $\color{green}{\text{Question:}}$ What is the name of the last modified file in the "/var/backups" directory?<br>
+$\color{green}{\text{Question:}}$ What is the name of the last modified file in the "/var/backups" directory?<br>
 $\color{green}{\text{Answer:}}$ apt.extended_states.0<br>
 $\color{green}{\text{Process:}}$ <br>
 - ls --help | grep time<br>
 - ls -lt | head -2
 
- $\color{green}{\text{Question:}}$  What is the inode number of the "shadow.bak" file in the "/var/backups" directory?<br>
+$\color{green}{\text{Question:}}$  What is the inode number of the "shadow.bak" file in the "/var/backups" directory?<br>
 $\color{green}{\text{Answer:}}$ 265293<br>
 $\color{green}{\text{Process:}}$ <br>
 - ls --help | grep inode<br>
@@ -134,17 +134,17 @@ $\color{green}{\text{Process:}}$ <br>
 
 ### Find Files and Directories
 
- $\color{green}{\text{Question:}}$  What is the name of the config file that has been created after 2020-03-03 and is smaller than 28k but larger than 25k?<br>
+$\color{green}{\text{Question:}}$  What is the name of the config file that has been created after 2020-03-03 and is smaller than 28k but larger than 25k?<br>
 $\color{green}{\text{Answer:}}$ 00-mesa-defaults.conf<br>
 $\color{green}{\text{Process:}}$ <br>
 - find / -type f -newermt 2020-03-03 -size +25k -size -28k -name "*.conf" 2>/dev/null<br>
 
- $\color{green}{\text{Question:}}$ How many files exist on the system that have the ".bak" extension?<br>
+$\color{green}{\text{Question:}}$ How many files exist on the system that have the ".bak" extension?<br>
 $\color{green}{\text{Answer:}}$ 4<br>
 $\color{green}{\text{Process:}}$ <br>
 - find / -type f -name "*.bak" 2>/dev/null | wc -l
 
- $\color{green}{\text{Question:}}$ Submit the full path of the "xxd" binary.<br>
+$\color{green}{\text{Question:}}$ Submit the full path of the "xxd" binary.<br>
 $\color{green}{\text{Answer:}}$ /usr/bin/xxd<br>
 $\color{green}{\text{Process:}}$ <br>
 - find / -type f -name "*xxd*" 2>/dev/null
@@ -161,14 +161,14 @@ $\color{green}{\text{Process:}}$ <br>
 
 ### File Descriptors and Redirections
 
- $\color{green}{\text{Question:}}$ How many total packages are installed on the target system?<br>
+$\color{green}{\text{Question:}}$ How many total packages are installed on the target system?<br>
 $\color{green}{\text{Answer:}}$ 32<br>
 $\color{green}{\text{Process:}}$ <br>
 - find / -type f -name "*.log" 2>/dev/null | wc -l<br>
 
 
 
- $\color{green}{\text{Question:}}$ How many files exist on the system that have the ".log" file extension?<br>
+$\color{green}{\text{Question:}}$ How many files exist on the system that have the ".log" file extension?<br>
 $\color{green}{\text{Answer:}}$ 737<br>
 $\color{green}{\text{Process:}}$ <br>
 - dpkg -l | grep 'ii' | wc -l<br>
@@ -181,7 +181,7 @@ $\color{green}{\text{Process:}}$ <br>
 
 
 
- $\color{green}{\text{Question:}}$ How many services are listening on the target system on all interfaces? (Not on localhost and IPv4 only)<br>
+$\color{green}{\text{Question:}}$ How many services are listening on the target system on all interfaces? (Not on localhost and IPv4 only)<br>
 $\color{green}{\text{Answer:}}$ 7<br>
 $\color{green}{\text{Process:}}$ <br>
 - ss -tln | awk '/0.0.0.0/ {print $4}' | grep 0.0.0.0 | wc -l<br>
@@ -206,7 +206,7 @@ $\color{green}{\text{Process:}}$ <br>
 - Ps aux | grep -i proftpd<br>
   - Grep -i proftpd → filter only lines related to ProFTPd, case insensitive
 
- $\color{green}{\text{Question:}}$  Use cURL from your Pwnbox (not the target machine) to obtain the source code of the "https://www.inlanefreight.com" website and filter all unique paths (https://www.inlanefreight.com/directory" or "/another/directory") of that domain. Submit the number of these paths as the answer.<br>
+$\color{green}{\text{Question:}}$  Use cURL from your Pwnbox (not the target machine) to obtain the source code of the "https://www.inlanefreight.com" website and filter all unique paths (https://www.inlanefreight.com/directory" or "/another/directory") of that domain. Submit the number of these paths as the answer.<br>
 $\color{green}{\text{Answer:}}$ 34<br>
 $\color{green}{\text{Process:}}$ <br>
   - curl -s https://www.inlanefreight.com | \<br>
@@ -220,17 +220,17 @@ $\color{green}{\text{Process:}}$ <br>
 ### User Management
 
 
- $\color{green}{\text{Question:}}$ Which option needs to be set to create a home directory for a new user using "useradd" command?<br>
+$\color{green}{\text{Question:}}$ Which option needs to be set to create a home directory for a new user using "useradd" command?<br>
 $\color{green}{\text{Answer:}}$ -m<br>
 $\color{green}{\text{Process:}}$ <br>
 - useradd --help | grep "home"
 
- $\color{green}{\text{Question:}}$ Which option needs to be set to lock a user account using the "usermod" command? (long version of the option)<br>
+$\color{green}{\text{Question:}}$ Which option needs to be set to lock a user account using the "usermod" command? (long version of the option)<br>
 $\color{green}{\text{Answer:}}$ --lock<br>
 $\color{green}{\text{Process:}}$ <br>
 - usermod --help | grep lock<br>
 
- $\color{green}{\text{Question:}}$ Which option needs to be set to execute a command as a different user using the "su" command? (long version of the option)<br>
+$\color{green}{\text{Question:}}$ Which option needs to be set to execute a command as a different user using the "su" command? (long version of the option)<br>
 $\color{green}{\text{Answer:}}$ --command<br>
 $\color{green}{\text{Process:}}$ <br>
 - su --help | grep command
@@ -243,7 +243,7 @@ $\color{green}{\text{Process:}}$ <br>
 ### Service and Process Management
 
 
- $\color{green}{\text{Question:}}$ Use the "systemctl" command to list all units of services and submit the unit name with the description "Load AppArmor profiles managed internally by snapd" as the answer.<br>
+$\color{green}{\text{Question:}}$ Use the "systemctl" command to list all units of services and submit the unit name with the description "Load AppArmor profiles managed internally by snapd" as the answer.<br>
 $\color{green}{\text{Answer:}}$ snapd.apparmor.service<br>
 $\color{green}{\text{Process:}}$ <br>
 - Systemctl<br>
@@ -271,7 +271,7 @@ $\color{green}{\text{Process:}}$ <br>
 ### Working with Web Services
 
 
- $\color{green}{\text{Question:}}$ Find a way to start a simple HTTP server inside Pwnbox or your local VM using "npm". Submit the command that starts the web server on port 8080 (use the short argument to specify the port number).<br>
+$\color{green}{\text{Question:}}$ Find a way to start a simple HTTP server inside Pwnbox or your local VM using "npm". Submit the command that starts the web server on port 8080 (use the short argument to specify the port number).<br>
 Hint: Npm is a package manager that allows you to download a basic web server package. This package also provides the option to specify the port. No need to install it. How would the command look after installing the corresponding package with a specified listening port?<br>
 $\color{green}{\text{Answer:}}$ http-server -p 8080<br>
 $\color{green}{\text{Process:}}$ <br>
